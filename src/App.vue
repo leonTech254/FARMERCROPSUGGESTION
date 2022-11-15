@@ -121,6 +121,7 @@ export default {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .input-data input {
@@ -187,6 +188,7 @@ export default {
   width: 80%;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 400px) {
