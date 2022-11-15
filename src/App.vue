@@ -194,6 +194,7 @@ export default {
 @media (max-width: 400px) {
   .farmerDashboard {
     grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
     padding: 0;
   }
   .input-data {
