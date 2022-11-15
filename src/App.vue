@@ -134,6 +134,12 @@ export default {
   padding: 0.2rem;
   text-align: center;
   color: green;
+  transition: 2s;
+}
+.input-data input:focus {
+  font-size: large;
+  font-weight: bold;
+  color: orange;
 }
 
 .input-data input::placeholder {
