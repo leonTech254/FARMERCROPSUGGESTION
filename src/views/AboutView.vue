@@ -21,14 +21,9 @@
           <div class="Sweetable-cropPrediction">
             <div class="crop-title">
               best crop
-              <span class="value">rice</span>
+              <span class="value">{{ predicted }}</span>
             </div>
-            <div class="result-reason">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
-              temporibus numquam iusto suscipit placeat aut maxime harum, error ratione
-              sit obcaecati, est quam dolorum reprehenderit iure quae voluptatibus
-              molestias. Eaque.
-            </div>
+            <div class="result-reason" v-html="plantInfo"></div>
           </div>
         </div>
       </div>
@@ -37,6 +32,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -45,6 +41,8 @@ export default {
       ph: "",
       rainfall: "",
       errArray: [],
+      predicted: "",
+      plantInfo: "",
     };
   },
   methods: {
@@ -77,6 +75,10 @@ export default {
       } else {
         // submit data
         this.errArray.push();
+        axios.post("/team-project/4.1", data).then((res) => {
+          this.predicted = res.data.data["predicted"];
+          this.plantInfo = res.data.data["predictedMoreInfo"];
+        });
       }
     },
   },
