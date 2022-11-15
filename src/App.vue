@@ -105,6 +105,7 @@ export default {
 * + * {
   padding: 0;
   margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .farmerDashboard {
@@ -146,7 +147,7 @@ export default {
 }
 .output-data {
   margin-left: 0.5rem;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .crop-title {
@@ -192,6 +193,9 @@ export default {
   .farmerDashboard {
     grid-template-columns: repeat(1, 1fr);
     padding: 0;
+  }
+  .input-data {
+    padding: 10px;
   }
 }
 </style>
