@@ -32,7 +32,7 @@ import { RouterLink, RouterView } from "vue-router";
         <div class="output-data">
           <div class="Sweetable-cropPrediction">
             <div class="crop-title">
-              CROP PREDICTION
+              CROP PREDICTION RESULT
               <span class="value"
                 ><br />
                 {{ predicted }}</span
